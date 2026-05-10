@@ -1,0 +1,385 @@
+/* ============================================================
+   Ahmad Khan V3 – home.css
+   Page‑specific styles for index.html
+   ============================================================ */
+
+/* --------------- Hero Section --------------- */
+.hero-section {
+  padding: 120px 0;
+  text-align: center;
+  background: radial-gradient(ellipse at top, rgba(212,175,55,0.08), transparent 60%);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.hero-sub {
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 80px 0;
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-cta .btn {
+    width: 100%;
+  }
+}
+
+/* --------------- Trust Counters --------------- */
+.counters-section {
+  padding: 80px 0;
+}
+
+.counter-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.counter {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  line-height: 1.2;
+}
+
+.counter-card .label {
+  display: block;
+  margin-top: 8px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.counter-card .ur.label {
+  font-size: 1.1em;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .counter {
+    font-size: 2rem;
+  }
+}
+
+/* --------------- Services Section --------------- */
+.services-section {
+  padding: 80px 0;
+}
+
+.service-card {
+  padding: 30px;
+  text-align: center;
+}
+
+.service-icon {
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+/* --------------- Pricing Section --------------- */
+.pricing-section {
+  padding: 80px 0;
+}
+
+.pricing-card {
+  position: relative;
+  padding: 30px;
+  text-align: center;
+}
+
+.pricing-card.popular {
+  border: 1px solid var(--accent-gold);
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin: 12px 0;
+}
+
+.duration, .reach, .desc {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 16px 0;
+}
+
+.features-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.features-list i {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .pricing-card.popular {
+    transform: none;
+  }
+}
+
+/* --------------- About Section --------------- */
+.about-section {
+  padding: 80px 0;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glass);
+  margin: 0 auto;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.about-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  color: var(--text-secondary);
+}
+
+.about-meta i {
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+
+/* --------------- Reviews Section --------------- */
+.reviews-section {
+  padding: 80px 0;
+}
+
+.review-card {
+  padding: 24px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewer-name {
+  font-weight: 600;
+}
+
+.reviewer-city {
+  font-size: 0.85rem;
+}
+
+.stars {
+  margin: 12px 0;
+}
+
+.review-text {
+  margin-bottom: 16px;
+}
+
+.review-text p {
+  margin-bottom: 8px;
+}
+
+.review-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.like-btn i {
+  transition: color 0.2s;
+}
+
+.like-btn.liked {
+  color: var(--accent-gold);
+}
+
+.like-btn.liked i {
+  color: var(--accent-gold);
+}
+
+.like-btn:hover {
+  color: var(--accent-gold-light);
+}
+
+.review-reply-btn {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.review-reply-btn:hover {
+  color: var(--accent-gold);
+}
+
+/* --------------- FAQ Section --------------- */
+.faq-section {
+  padding: 80px 0;
+}
+
+/* Glass-accordion is already styled in universal.css, 
+   no extra styles needed here unless specific spacing adjustments */
+.glass-accordion .accordion-item {
+  margin-bottom: 12px; /* ensure spacing */
+}
+
+/* --------------- Contact / Two WhatsApp Cards --------------- */
+.contact-section {
+  padding: 80px 0;
+}
+
+.wa-card {
+  text-align: center;
+  padding: 30px;
+}
+
+.wa-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.wa-status {
+  display: inline-block;
+  margin: 12px 0;
+}
+
+.wa-card .btn {
+  margin-top: 12px;
+}
+
+/* --------------- Private Group Section --------------- */
+.private-group-section {
+  padding: 80px 0;
+}
+
+.private-group-section .glass-card {
+  padding: 40px;
+}
+
+.private-group-section h3 {
+  margin: 16px 0 12px;
+}
+
+.private-group-section p {
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+/* --------------- General spacing helpers (used in index.html) --------------- */
+.mt-3 {
+  margin-top: 32px;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/* Fix overflow on small screens */
+@media (max-width: 576px) {
+  .counter-card,
+  .service-card,
+  .pricing-card,
+  .review-card,
+  .wa-card {
+    padding: 20px 16px;
+  }
+  
+  .hero-section h1 .en {
+    font-size: 2rem;
+  }
+  
+  .hero-section h1 .ur {
+    font-size: 1.5rem;
+  }
+  }
