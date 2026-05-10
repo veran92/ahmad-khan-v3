@@ -1,0 +1,266 @@
+/* ============================================================
+   Ahmad Khan V3 – channel-detail.css
+   Page‑specific styles for channel-detail.html
+   ============================================================ */
+
+/* --------------- Page Layout --------------- */
+.channel-detail-main {
+  padding: 60px 0 80px;
+}
+
+/* --------------- Back Links --------------- */
+.back-link,
+.back-link-bottom {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  margin-bottom: 24px;
+}
+
+.back-link:hover,
+.back-link-bottom:hover {
+  color: var(--accent-gold);
+}
+
+.back-link i,
+.back-link-bottom i {
+  font-size: 0.95rem;
+}
+
+/* Bottom back link is block and centered */
+.back-link-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 0;
+  padding: 0 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --------------- Detail Card --------------- */
+.channel-detail-card {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Give horizontal padding to all direct children except image & back-link */
+.channel-detail-card > *:not(.detail-img-wrapper):not(.back-link-bottom):not(.detail-img-fallback) {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.channel-detail-card > .detail-img-wrapper {
+  padding: 0;
+}
+
+/* --------------- Image Area --------------- */
+.detail-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.detail-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.channel-detail-card:hover .detail-img-wrapper img {
+  transform: scale(1.03);
+}
+
+/* Image Fallback */
+.detail-img-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.detail-img-fallback i {
+  font-size: 3rem;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+.detail-img-fallback span {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+
+/* --------------- Badge --------------- */
+.channel-detail-card .badge {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* --------------- Channel Name --------------- */
+.channel-detail-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* --------------- Description --------------- */
+.channel-detail-desc {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.channel-detail-desc .en {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.channel-detail-desc .ur {
+  color: var(--text-secondary);
+  font-size: 1.1em;
+  line-height: 1.9;
+}
+
+/* --------------- Stats Row --------------- */
+.detail-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 20px;
+}
+
+.detail-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-stat i {
+  color: var(--accent-gold);
+  font-size: 1.3rem;
+  width: 24px;
+  text-align: center;
+}
+
+.detail-stat .en,
+.detail-stat .ur {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.detail-stat .ur {
+  font-size: 0.9em;
+}
+
+.detail-stat strong {
+  font-size: 1.3rem;
+  color: var(--accent-gold);
+  margin-left: auto;
+}
+
+/* --------------- WhatsApp Button --------------- */
+.channel-detail-card .btn-gold {
+  margin-top: 24px;
+  width: calc(100% - 60px);
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 1.2rem;
+  padding: 16px 40px;
+  box-sizing: border-box;
+}
+
+/* --------------- Error State --------------- */
+#detail-error {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#detail-error i {
+  color: var(--accent-gold);
+}
+
+#detail-error h2 {
+  margin-bottom: 12px;
+}
+
+#detail-error p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+/* --------------- Loading Spinner --------------- */
+#detail-loading {
+  padding: 80px 0;
+}
+
+/* --------------- Responsive --------------- */
+@media (max-width: 768px) {
+  .channel-detail-main {
+    padding: 30px 0 60px;
+  }
+
+  .detail-img-wrapper {
+    height: 220px;
+  }
+
+  .channel-detail-name {
+    font-size: 1.5rem;
+  }
+
+  .channel-detail-card > *:not(.detail-img-wrapper):not(.back-link-bottom) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .channel-detail-card .btn-gold {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
+    padding: 14px 28px;
+  }
+
+  .detail-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-img-wrapper {
+    height: 200px;
+  }
+
+  .channel-detail-name {
+    font-size: 1.3rem;
+  }
+
+  .detail-img-fallback i {
+    font-size: 2rem;
+  }
+
+  .detail-img-fallback span {
+    font-size: 2rem;
+  }
+  }
