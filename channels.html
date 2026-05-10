@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse 55+ premium WhatsApp channels for sale. Filter by category, followers, and price. – Ahmad Khan">
+    <title>WhatsApp Channels Marketplace – Ahmad Khan</title>
+
+    <!-- Font Awesome 6 (Free CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts (Inter + Noto Nastaliq Urdu) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/universal.css">
+    <!-- Page‑specific Styles (to be created later) -->
+    <link rel="stylesheet" href="css/marketplace.css">
+</head>
+<body>
+
+    <!-- ========== DISCOUNT BAR (hidden by default) ========== -->
+    <div class="discount-bar hidden">
+        <span class="discount-text"></span>
+        <button class="close-btn" aria-label="Close">&times;</button>
+    </div>
+
+    <!-- ========== STICKY GLASS NAVIGATION ========== -->
+    <header class="glass-nav">
+        <nav class="nav-container container">
+            <a href="index.html" class="nav-logo">Ahmad Khan</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="channels.html" class="active">Channels</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========== MARKETPLACE HERO ========== -->
+        <section class="marketplace-hero">
+            <div class="container text-center">
+                <h1>
+                    <span class="en">Our Channels Marketplace</span>
+                    <span class="ur">ہمارا چینل بازار</span>
+                </h1>
+                <p>
+                    <span class="en">Find the perfect WhatsApp channel for your niche. Filter by category, followers, and price.</span>
+                    <span class="ur">اپنے موضوع کے لیے بہترین واٹس ایپ چینل تلاش کریں۔ زمرہ، فالوورز اور قیمت کے لحاظ سے فلٹر کریں۔</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== STICKY FILTER BAR ========== -->
+        <div class="filter-bar" style="position:sticky; top:70px; z-index:50;">
+            <div class="container filter-container">
+                <!-- Category -->
+                <div class="filter-group">
+                    <label for="filter-category">
+                        <span class="en">Category</span>
+                        <span class="ur">زمرہ</span>
+                    </label>
+                    <select id="filter-category">
+                        <option value="all">
+                            <span class="en">All Categories</span>
+                            <span class="ur">تمام زمرہ جات</span>
+                        </option>
+                        <option value="education">Education / تعلیم</option>
+                        <option value="entertainment">Entertainment / تفریح</option>
+                        <option value="news">News / خبریں</option>
+                        <option value="tech">Tech / ٹیک</option>
+                        <option value="business">Business / کاروبار</option>
+                        <option value="sports">Sports / کھیل</option>
+                        <option value="lifestyle">Lifestyle / طرز زندگی</option>
+                        <option value="gaming">Gaming / گیمنگ</option>
+                        <option value="automotive">Automotive / گاڑیاں</option>
+                        <option value="religious">Religious / مذہبی</option>
+                    </select>
+                </div>
+                <!-- Min Followers -->
+                <div class="filter-group">
+                    <label for="filter-followers">
+                        <span class="en">Min. Followers</span>
+                        <span class="ur">کم از کم فالوورز</span>
+                    </label>
+                    <select id="filter-followers">
+                        <option value="0">
+                            <span class="en">Any</span>
+                            <span class="ur">کوئی بھی</span>
+                        </option>
+                        <option value="10000">
+                            <span class="en">10K+</span>
+                            <span class="ur">10 ہزار+</span>
+                        </option>
+                        <option value="50000">
+                            <span class="en">50K+</span>
+                            <span class="ur">50 ہزار+</span>
+                        </option>
+                        <option value="100000">
+                            <span class="en">100K+</span>
+                            <span class="ur">100 ہزار+</span>
+                        </option>
+                    </select>
+                </div>
+                <!-- Max Price -->
+                <div class="filter-group">
+                    <label for="filter-price">
+                        <span class="en">Max. Price (Rs.)</span>
+                        <span class="ur">زیادہ سے زیادہ قیمت (روپے)</span>
+                    </label>
+                    <select id="filter-price">
+                        <option value="999999">
+                            <span class="en">Any</span>
+                            <span class="ur">کوئی بھی</span>
+                        </option>
+                        <option value="10000">10,000</option>
+                        <option value="20000">20,000</option>
+                        <option value="50000">50,000</option>
+                    </select>
+                </div>
+                <!-- Sort By -->
+                <div class="filter-group">
+                    <label for="filter-sort">
+                        <span class="en">Sort By</span>
+                        <span class="ur">ترتیب</span>
+                    </label>
+                    <select id="filter-sort">
+                        <option value="default">
+                            <span class="en">Default</span>
+                            <span class="ur">طے شدہ</span>
+                        </option>
+                        <option value="price-asc">
+                            <span class="en">Price: Low to High</span>
+                            <span class="ur">قیمت: کم سے زیادہ</span>
+                        </option>
+                        <option value="price-desc">
+                            <span class="en">Price: High to Low</span>
+                            <span class="ur">قیمت: زیادہ سے کم</span>
+                        </option>
+                        <option value="followers-desc">
+                            <span class="en">Followers: High to Low</span>
+                            <span class="ur">فالوورز: زیادہ سے کم</span>
+                        </option>
+                    </select>
+                </div>
+                <!-- Reset -->
+                <div class="filter-group" style="align-self:flex-end;">
+                    <button id="filter-reset" class="btn btn-glass">
+                        <span class="en">Reset</span>
+                        <span class="ur">ری سیٹ</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== CHANNEL GRID CONTAINER ========== -->
+        <section class="channels-section">
+            <div class="container">
+                <!-- Loading Spinner -->
+                <div id="channels-loading" class="loading-container">
+                    <div class="spinner"></div>
+                    <p>
+                        <span class="en">Loading channels…</span>
+                        <span class="ur">چینلز لوڈ ہو رہے ہیں…</span>
+                    </p>
+                </div>
+                <!-- Grid (initially empty, populated by marketplace.js) -->
+                <div id="channels-grid" class="grid-3"></div>
+                <!-- No Results (hidden by default) -->
+                <div id="no-results" class="glass-card text-center hidden" style="grid-column:1/-1; padding:40px;">
+                    <i class="fas fa-search fa-3x text-muted"></i>
+                    <p class="en mt-3">No channels found matching your filters.</p>
+                    <p class="ur mt-2">آپ کے فلٹرز سے کوئی چینل نہیں ملا۔</p>
+                    <p class="text-muted">
+                        <span class="en">Try changing your criteria.</span>
+                        <span class="ur">اپنے معیار کو تبدیل کرنے کی کوشش کریں۔</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="glass-footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="current-year"></span> Ahmad Khan. All rights reserved.</p>
+            <p class="footer-credit">
+                Credit goes to <strong>Lilarose</strong>, an obedient member of 
+                <a href="https://whatsapp.com/channel/0029VbCC0Yd89inr4hIduq2y" target="_blank" rel="noopener">PeshoX Intelligence</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+    <a href="#" class="floating-wa" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/marketplace.js"></script>
+</body>
+  </html>
