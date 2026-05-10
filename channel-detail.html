@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View full details of this WhatsApp channel for sale by Ahmad Khan.">
+    <title>Channel Details – Ahmad Khan</title>
+
+    <!-- Font Awesome 6 (Free CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts (Inter + Noto Nastaliq Urdu) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/universal.css">
+    <!-- Page‑specific Styles (to be created later) -->
+    <link rel="stylesheet" href="css/channel-detail.css">
+</head>
+<body>
+
+    <!-- ========== DISCOUNT BAR (hidden by default) ========== -->
+    <div class="discount-bar hidden">
+        <span class="discount-text"></span>
+        <button class="close-btn" aria-label="Close">&times;</button>
+    </div>
+
+    <!-- ========== STICKY GLASS NAVIGATION ========== -->
+    <header class="glass-nav">
+        <nav class="nav-container container">
+            <a href="index.html" class="nav-logo">Ahmad Khan</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="channels.html" class="active">Channels</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main class="channel-detail-main">
+        <div class="container">
+            <!-- Back to Marketplace -->
+            <a href="channels.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                <span class="en">Back to Marketplace</span>
+                <span class="ur">واپس بازار میں</span>
+            </a>
+
+            <!-- Loading Spinner -->
+            <div id="detail-loading" class="loading-container">
+                <div class="spinner"></div>
+                <p>
+                    <span class="en">Loading channel details…</span>
+                    <span class="ur">چینل کی تفصیلات لوڈ ہو رہی ہیں…</span>
+                </p>
+            </div>
+
+            <!-- Error State (hidden initially) -->
+            <div id="detail-error" class="glass-card text-center hidden fade-in" style="padding:40px;">
+                <i class="fas fa-exclamation-triangle fa-3x" style="color: var(--accent-gold); margin-bottom: 20px;"></i>
+                <h2>
+                    <span class="en">Channel Not Found</span>
+                    <span class="ur">چینل نہیں ملا</span>
+                </h2>
+                <p>
+                    <span class="en">The link may be broken or the channel may have been sold.</span>
+                    <span class="ur">لنک ٹوٹ سکتا ہے یا چینل فروخت ہو چکا ہے۔</span>
+                </p>
+                <a href="channels.html" class="btn btn-gold mt-3">
+                    <i class="fas fa-store"></i>
+                    <span class="en">Browse Marketplace</span>
+                    <span class="ur">مارکیٹ پلیس براؤز کریں</span>
+                </a>
+            </div>
+
+            <!-- Detail Card (hidden initially, populated by JS) -->
+            <div id="detail-card" class="glass-card channel-detail-card fade-in hidden"></div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="glass-footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="current-year"></span> Ahmad Khan. All rights reserved.</p>
+            <p class="footer-credit">
+                Credit goes to <strong>Lilarose</strong>, an obedient member of 
+                <a href="https://whatsapp.com/channel/0029VbCC0Yd89inr4hIduq2y" target="_blank" rel="noopener">PeshoX Intelligence</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+    <a href="#" class="floating-wa" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/channel-detail.js"></script>
+</body>
+</html>
