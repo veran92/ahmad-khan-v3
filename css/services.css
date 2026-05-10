@@ -1,0 +1,309 @@
+/* ============================================================
+   Ahmad Khan V3 – services.css
+   Page‑specific styles for services.html
+   ============================================================ */
+
+/* --------------- Services Hero --------------- */
+.services-hero {
+  padding: 100px 0;
+  text-align: center;
+  background: radial-gradient(ellipse at top, rgba(212,175,55,0.06), transparent 60%);
+}
+
+.services-hero h1 .en {
+  font-size: 2.8rem;
+  color: var(--text-primary);
+}
+
+.services-hero h1 .ur {
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-top: 8px;
+}
+
+.services-hero .hero-sub {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 16px auto 0;
+}
+
+/* --------------- Service Detail Section --------------- */
+.service-detail-section {
+  padding: 80px 0;
+}
+
+/* Each service card (glass‑card) */
+.service-detail-card {
+  padding: 40px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-icon-large {
+  margin-bottom: 24px;
+}
+
+.service-detail-card h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.service-detail-card h2 .en {
+  display: block;
+  color: var(--text-primary);
+}
+
+.service-detail-card h2 .ur {
+  display: block;
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  margin-top: 6px;
+}
+
+.service-intro {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* --------------- How It Works (Steps) --------------- */
+.how-it-works {
+  margin-bottom: 32px;
+}
+
+.how-it-works h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--accent-gold);
+}
+
+.steps-list {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.steps-list li {
+  counter-increment: step;
+  padding: 12px 0 12px 40px;
+  position: relative;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.steps-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  background: var(--accent-gold);
+  color: #000;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.steps-list li:last-child {
+  border-bottom: none;
+}
+
+.steps-list .en,
+.steps-list .ur {
+  display: block;
+}
+
+/* --------------- Key Benefits --------------- */
+.key-benefits {
+  margin-bottom: 32px;
+}
+
+.key-benefits h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--accent-gold);
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.benefits-list li {
+  padding: 10px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.benefits-list li:last-child {
+  border-bottom: none;
+}
+
+.benefits-list i {
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+/* --------------- Pricing Summary (inside Paid Promotion) --------------- */
+.pricing-summary {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.pricing-summary h3 {
+  font-size: 1.4rem;
+  color: var(--accent-gold);
+  margin-bottom: 20px;
+}
+
+.pricing-grid-static {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pricing-card-static {
+  background: rgba(28,28,30,0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 30px 25px;
+  text-align: center;
+  min-width: 200px;
+  flex: 1 1 200px;
+  max-width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card-static.popular {
+  border-color: var(--accent-gold);
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(212,175,55,0.15);
+}
+
+.pricing-card-static h4 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.pricing-card-static h4 .en {
+  color: var(--text-primary);
+  display: block;
+}
+
+.pricing-card-static h4 .ur {
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+.pricing-card-static .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+}
+
+.pricing-card-static p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.pricing-card-static .badge {
+  margin-bottom: 12px;
+}
+
+/* --------------- Final CTA --------------- */
+.final-cta {
+  padding: 100px 0;
+}
+
+.final-cta .glass-card {
+  padding: 50px;
+}
+
+.final-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.final-cta h2 .en {
+  color: var(--text-primary);
+  display: block;
+}
+
+.final-cta h2 .ur {
+  color: var(--accent-gold);
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+.final-cta .btn-large {
+  font-size: 1.2rem;
+  padding: 16px 40px;
+}
+
+/* --------------- Responsive Adjustments --------------- */
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 60px 0;
+  }
+
+  .services-hero h1 .en {
+    font-size: 2rem;
+  }
+
+  .services-hero h1 .ur {
+    font-size: 1.5rem;
+  }
+
+  .service-detail-card {
+    padding: 30px 20px;
+  }
+
+  .pricing-grid-static {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card-static {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .final-cta {
+    padding: 60px 0;
+  }
+
+  .final-cta .glass-card {
+    padding: 30px 20px;
+  }
+}
+
+/* --------------- Font Smoothing & Misc --------------- */
+.service-detail-card h2,
+.service-detail-card h3 {
+  -webkit-font-smoothing: antialiased;
+  }
