@@ -1,0 +1,254 @@
+/* ============================================================
+   Ahmad Khan V3 – marketplace.css
+   Page‑specific styles for channels.html
+   ============================================================ */
+
+/* --------------- Marketplace Hero --------------- */
+.marketplace-hero {
+  padding: 100px 0;
+  text-align: center;
+  background: radial-gradient(ellipse at top, rgba(212,175,55,0.06), transparent 60%);
+}
+
+.marketplace-hero h1 .en {
+  font-size: 2.8rem;
+}
+
+.marketplace-hero h1 .ur {
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-top: 8px;
+}
+
+.marketplace-hero p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 16px auto 0;
+}
+
+/* --------------- Sticky Filter Bar --------------- */
+.filter-bar {
+  position: sticky;
+  top: 70px;            /* height of nav */
+  z-index: 50;
+  padding: 12px 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  padding: 16px 20px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+}
+
+/* Each filter group (label + select) */
+.filter-group {
+  flex: 1 1 160px;
+  min-width: 140px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color var(--transition-base);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238e8e93' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.filter-group select:focus {
+  border-color: var(--accent-gold);
+}
+
+/* Reset button alignment */
+.filter-group:last-child {
+  align-self: flex-end;
+}
+
+/* --------------- Channels Section --------------- */
+.channels-section {
+  padding: 60px 0 80px;
+}
+
+/* --------------- Channel Card (extends .glass-card) --------------- */
+.channel-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Image wrapper */
+.channel-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+}
+
+.channel-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.channel-card:hover .channel-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Fallback (shown on image error via JS) */
+.channel-img-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.03);
+}
+
+.channel-img-fallback i {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.channel-img-fallback span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+
+/* Card inner content (padding applied to children) */
+.channel-card .badge {
+  margin: 12px 16px 0;
+}
+
+.channel-name {
+  padding: 0 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 8px 0 6px;
+}
+
+.channel-desc {
+  padding: 0 16px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  flex: 1;            /* push stats and button down */
+}
+
+.channel-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.channel-stats .followers,
+.channel-stats .price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.channel-stats i {
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+}
+
+.channel-stats .price {
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+/* WhatsApp button inside card */
+.channel-card .btn {
+  margin: 0 16px 16px;
+  width: calc(100% - 32px);
+}
+
+/* --------------- No Results State --------------- */
+#no-results {
+  margin-top: 40px;
+}
+
+#no-results i {
+  color: var(--text-muted);
+}
+
+/* --------------- Loading Spinner --------------- */
+#channels-loading {
+  padding: 60px 0;
+}
+
+/* --------------- Margin Utilities (used in channels.html) --------------- */
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mt-3 {
+  margin-top: 24px;
+}
+
+/* --------------- Responsive --------------- */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+
+  .channel-img-wrapper {
+    height: 150px;
+  }
+
+  .marketplace-hero {
+    padding: 60px 0;
+  }
+
+  .marketplace-hero h1 .en {
+    font-size: 2rem;
+  }
+
+  .marketplace-hero h1 .ur {
+    font-size: 1.5rem;
+  }
+  }
